@@ -1,0 +1,63 @@
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+/* footer clases ------------------------------------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: #08427c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.socialMedia__text {
+    margin: 10px 0 15px 0;
+}
+
+.socialMedia__link {
+    text-decoration: none;
+}
+
+.socialMedia__img {
+    height: 45px;
+    width: 45px;
+    filter: invert(30%) sepia(85%) saturate(1570%) hue-rotate(313deg) brightness(90%) contrast(99%);
+}
+
+.socialMedia__img:hover {
+    filter: invert(90%) sepia(1%) saturate(3084%) hue-rotate(352deg) brightness(110%) contrast(105%);
+}
+

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina La Paseandera</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+</head>
+<body>
+    <h1>Pagina La Paseandera </h1>
+    <br>
+    <h2>Lista de usuarios</h2>
+    
+    <table id="tabla">
+        <tbody>
+            <tr>
+                <th><b>Nombre</b></th>
+                <th><b>Apellido</b></th>
+                <th><b>DNI</b></th>
+                <th><b>Fecha Nacimiento</b></th>              
+                <th><b>Correo</b></th>
+            </tr>
+        </tbody>
+        
+        <tbody>
+            {% for i in objeto %}
+            <tr>
+                <td>{{ i.nonbre}}</td>
+                <td>{{ i.apellido }}</td>
+                <td>{{ i.DNI }}</td>
+                <td>{{ i.fecha_nac }}</td>
+                <td>{{ i.correo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

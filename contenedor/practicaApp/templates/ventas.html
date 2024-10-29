@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina La Paseandera</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+</head>
+<body>
+    <h1>Pagina La Paseandera </h1>
+    <br>
+    <h2>Hola presentamos los productos</h2>
+    
+    <table id="tabla">
+        <tbody>
+            <tr>
+                <th><b>Fecha Venta</b></th>
+                <th><b>Hamburguesa</b></th>
+                <th><b>Lomo</b></th>
+                <th><b>Chorizo</b></th>              
+                <th><b>cono_fritas</b></th>
+                <th><b>milanesa</b></th>
+                <th><b>pizza</b></th>
+                <th><b>agua_chica</b></th>
+                <th><b>agua_grande</b></th>
+                <th><b>cerveza_lata</b></th>
+                <th><b>cerveza_litro</b></th>
+            </tr>
+        </tbody>
+        
+        <tbody>
+            {% for i in objeto %}
+            <tr>
+                <td>{{ i.fecha }}</td>
+                <td>{{ i.hamburguesa }}</td>
+                <td>{{ i.lomo }}</td>
+                <td>{{ i.chorizo }}</td>
+                <td>{{i.cono_fritas}}</td>
+                <td>{{i.milanesa}}</td>
+                <td>{{i.pizza}}</td>
+                <td>{{i.agua_chica}}</td>
+                <td>{{i.agua_grande}}</td>
+                <td>{{i.cerveza_lata}}</td>
+                <td>{{i.cerveza_litro}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
